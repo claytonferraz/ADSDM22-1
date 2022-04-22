@@ -17,7 +17,7 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var container = Container(
+    /* var container = Container(
       height: 150,
       width: 150,
       color: Colors.blueAccent,
@@ -30,7 +30,7 @@ class HomePageState extends State<HomePage> {
           child: const Icon(Icons.book),
         ),
       ),
-    );
+    ); */
 
     return Scaffold(
       appBar: AppBar(
@@ -40,7 +40,10 @@ class HomePageState extends State<HomePage> {
         child: Switch(
           value: escuro,
           onChanged: (value) {
-            print(value);
+            //realiza a alteração no Switch
+            setState(() {
+              escuro = value;
+            });
           },
         ),
       ),
