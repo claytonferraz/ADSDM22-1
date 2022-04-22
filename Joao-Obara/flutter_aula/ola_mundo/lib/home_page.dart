@@ -14,15 +14,22 @@ class HomePageState extends State<HomePage> {
   int counter = 0;
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Center(
-            child: GestureDetector(
-                child: Text('Click: $counter'),
-                onTap: () {
-                  // ao colocar o setState vai mudar o estado
-                  setState(() {
-                    counter++;
-                  });
-                })));
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('App Flutter ADS'),
+      ),
+      body: Center(
+          child: GestureDetector(
+              child: Text(
+                'Click: $counter',
+                style: const TextStyle(fontSize: 100),
+              ),
+              onTap: () {
+                // ao colocar o setState vai mudar o estado
+                setState(() {
+                  counter++;
+                });
+              })),
+    );
   }
 }

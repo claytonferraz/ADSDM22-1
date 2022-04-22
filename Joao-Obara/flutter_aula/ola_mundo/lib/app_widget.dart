@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:ola_mundo/home_page.dart';
 
 class AppWidget extends StatelessWidget {
@@ -9,8 +10,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.green),
-      // home: Container(child: const Center(child: Text('aula material'))),
+      theme: ThemeData(primaryColor: Colors.red),
       home: const HomePage(),
     );
   }
