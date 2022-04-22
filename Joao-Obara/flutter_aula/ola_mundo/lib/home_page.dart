@@ -21,6 +21,7 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('App Flutter ADS'),
+        actions: const [CustomSwitch()],
       ),
       body: const Center(
         child: CustomSwitch(),
