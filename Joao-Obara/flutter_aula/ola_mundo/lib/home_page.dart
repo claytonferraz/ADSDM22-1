@@ -18,7 +18,15 @@ class HomePageState extends State<HomePage> {
       height: 150,
       width: 150,
       color: Colors.blueAccent,
-      child: Container(height: 50, width: 50, color: Colors.orange),
+      child: Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+          height: 50,
+          width: 50,
+          color: Colors.orange,
+          child: const Icon(Icons.book),
+        ),
+      ),
     );
 
     return Scaffold(
