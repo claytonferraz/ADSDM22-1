@@ -28,18 +28,18 @@ class HomePageState extends State<HomePage> {
         height: double.infinity,
         child: ListView(
           //ListView possui tela infinita/rolagem...
-          scrollDirection: Axis.horizontal, //Rolar horizontalmente
+          // scrollDirection: Axis.horizontal, //Rolar horizontalmente
           children: [
             const Center(child: CustomSwitch()),
             Container(
-              height: 50,
+              height: 100,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(height: 50, width: 50, color: Colors.yellow),
-                Container(height: 50, width: 950, color: Colors.red),
+                Container(height: 50, width: 50, color: Colors.red),
                 Container(height: 50, width: 50, color: Colors.blue),
               ],
             ),
