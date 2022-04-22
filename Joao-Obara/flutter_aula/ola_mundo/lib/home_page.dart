@@ -1,6 +1,7 @@
 // sempre se cria uma classe que vai dentro da classe StateFul
 import 'package:flutter/material.dart';
-import 'package:ola_mundo/app_controller.dart';
+
+import 'app_controller.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
