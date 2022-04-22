@@ -1,5 +1,6 @@
 // sempre se cria uma classe que vai dentro da classe StateFul
 import 'package:flutter/material.dart';
+import 'package:ola_mundo/app_controller.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -38,11 +39,12 @@ class HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Switch(
-          value: escuro,
+          value: AppController.instanse.escuro,
           onChanged: (value) {
-            //realiza a alteração no Switch
+            //setState anima o switch
+            //Chama o metodo changeTheme
             setState(() {
-              escuro = value;
+              AppController.instanse.changeTheme();
             });
           },
         ),

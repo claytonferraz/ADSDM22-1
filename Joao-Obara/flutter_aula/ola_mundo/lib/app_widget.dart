@@ -17,7 +17,10 @@ class AppWidget extends StatelessWidget {
         return MaterialApp(
           theme: ThemeData(
             primarySwatch: Colors.red,
-            brightness: Brightness.dark,
+            //operador ternario, escuro? true ou false
+            brightness: AppController.instanse.escuro
+                ? Brightness.dark
+                : Brightness.light,
           ),
           home: const HomePage(),
         );
