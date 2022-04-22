@@ -12,6 +12,9 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   int counter = 0;
+  //Define o tema
+  bool escuro = false;
+
   @override
   Widget build(BuildContext context) {
     var container = Container(
@@ -33,7 +36,14 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('App Flutter ADS'),
       ),
-      body: container,
+      body: Center(
+        child: Switch(
+          value: escuro,
+          onChanged: (value) {
+            print(value);
+          },
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_circle),
         onPressed: () {
