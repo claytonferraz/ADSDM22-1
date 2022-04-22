@@ -18,36 +18,12 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    /* var container = Container(
-      height: 150,
-      width: 150,
-      color: Colors.blueAccent,
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-          height: 50,
-          width: 50,
-          color: Colors.orange,
-          child: const Icon(Icons.book),
-        ),
-      ),
-    ); */
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('App Flutter ADS'),
       ),
-      body: Center(
-        child: Switch(
-          value: AppController.instanse.escuro,
-          onChanged: (value) {
-            //setState anima o switch
-            //Chama o metodo changeTheme
-            setState(() {
-              AppController.instanse.changeTheme();
-            });
-          },
-        ),
+      body: const Center(
+        child: CustomSwitch(),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_circle),
@@ -57,6 +33,21 @@ class HomePageState extends State<HomePage> {
           });
         },
       ),
+    );
+  }
+}
+
+class CustomSwitch extends StatelessWidget {
+  const CustomSwitch({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+      value: AppController.instanse.escuro,
+      onChanged: (value) {
+        //Chama o metodo changeTheme
+        AppController.instanse.changeTheme();
+      },
     );
   }
 }
