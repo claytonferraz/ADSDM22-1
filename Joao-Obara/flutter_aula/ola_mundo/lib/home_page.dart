@@ -18,18 +18,11 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('App Flutter ADS'),
       ),
-      body: Center(
-          child: GestureDetector(
-              child: Text(
-                'Click: $counter',
-                style: const TextStyle(fontSize: 100),
-              ),
-              onTap: () {
-                // ao colocar o setState vai mudar o estado
-                setState(() {
-                  counter--;
-                });
-              })),
+      body: Container(
+        height: 50,
+        width: 50,
+        color: Colors.blueAccent,
+      ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_circle),
         onPressed: () {
