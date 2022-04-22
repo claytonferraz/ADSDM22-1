@@ -14,15 +14,18 @@ class HomePageState extends State<HomePage> {
   int counter = 0;
   @override
   Widget build(BuildContext context) {
+    var container = Container(
+      height: 150,
+      width: 150,
+      color: Colors.blueAccent,
+      child: Container(height: 50, width: 50, color: Colors.orange),
+    );
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('App Flutter ADS'),
       ),
-      body: Container(
-        height: 50,
-        width: 50,
-        color: Colors.blueAccent,
-      ),
+      body: container,
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_circle),
         onPressed: () {
