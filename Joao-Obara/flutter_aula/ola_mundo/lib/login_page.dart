@@ -20,11 +20,29 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               TextField(
+                keyboardType: TextInputType.emailAddress, //tipo de teclado
                 decoration: InputDecoration(
                   labelText: 'E-mail',
                   border: OutlineInputBorder(),
                 ),
               ),
+              SizedBox(
+                height: 25,
+              ),
+              TextField(
+                obscureText: true, //Não mostrar a senha
+                decoration: InputDecoration(
+                  labelText: 'Senha',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              ElevatedButton(
+                onPressed: () {}, //Corrigir
+                child: Text('Login'),
+              )
             ],
           ),
         ),
