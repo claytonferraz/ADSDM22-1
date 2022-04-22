@@ -27,9 +27,17 @@ class HomePageState extends State<HomePage> {
               onTap: () {
                 // ao colocar o setState vai mudar o estado
                 setState(() {
-                  counter++;
+                  counter--;
                 });
               })),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add_circle),
+        onPressed: () {
+          setState(() {
+            counter++;
+          });
+        },
+      ),
     );
   }
 }
