@@ -26,8 +26,9 @@ class HomePageState extends State<HomePage> {
       body: SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          //ListView possui tela infinita/rolagem...
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Center(child: CustomSwitch()),
             Container(
@@ -38,7 +39,7 @@ class HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(height: 50, width: 50, color: Colors.yellow),
-                Container(height: 50, width: 50, color: Colors.red),
+                Container(height: 950, width: 50, color: Colors.red),
                 Container(height: 50, width: 50, color: Colors.blue),
               ],
             ),
