@@ -28,8 +28,20 @@ class HomePageState extends State<HomePage> {
         height: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Center(child: CustomSwitch()),
+          children: [
+            const Center(child: CustomSwitch()),
+            Container(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(height: 50, width: 50, color: Colors.yellow),
+                Container(height: 50, width: 50, color: Colors.red),
+                Container(height: 50, width: 50, color: Colors.blue),
+              ],
+            ),
           ],
         ),
       ),
