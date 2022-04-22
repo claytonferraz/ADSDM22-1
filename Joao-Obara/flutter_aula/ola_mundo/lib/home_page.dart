@@ -23,8 +23,15 @@ class HomePageState extends State<HomePage> {
         title: const Text('App Flutter ADS'),
         actions: const [CustomSwitch()],
       ),
-      body: const Center(
-        child: CustomSwitch(),
+      body: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Center(child: CustomSwitch()),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add_circle),
