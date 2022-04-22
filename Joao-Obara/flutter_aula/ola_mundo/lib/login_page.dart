@@ -23,6 +23,8 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.network(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw2NL1FLOfzPcP06X2q4T4tT5wqohItaWDRto2t8VuXw&s"),
                 TextField(
                   onChanged: (text) => usuario =
                       text, //quando tiver mudança passar o email para a variavel usuario
@@ -50,8 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     //Login simulado
                     if (usuario == "root" && senha == "root") {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const HomePage()));
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else
                       print("Login errado");
                   }, //Corrigir
