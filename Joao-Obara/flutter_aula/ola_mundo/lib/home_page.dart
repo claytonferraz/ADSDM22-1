@@ -15,7 +15,6 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   int counter = 0;
   //Define o tema
-  bool escuro = false;
 
   @override
   Widget build(BuildContext context) {
